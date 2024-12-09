@@ -1,15 +1,23 @@
-> Why do I have a folder named ".expo" in my project?
+lifeofkai.ai
+to fix the podfile error ](https://stackoverflow.com/questions/36902497/cannot-install-cocoapods-no-podfile-found-in-the-project-directory) the one with 139 upvotes
 
-The ".expo" folder is created when an Expo project is started using "expo start" command.
+cd to ios on react native and then run "pod install" then "pod install --repo-update"
 
-> What do the files contain?
+HOW TO RUN
 
-- "devices.json": contains information about devices that have recently opened this project. This is used to populate the "Development sessions" list in your development builds.
-- "packager-info.json": contains port numbers and process PIDs that are used to serve the application to the mobile device/simulator.
-- "settings.json": contains the server configuration that is used to serve the application manifest.
+cd to lifeofkaiapp
+run "npx expo start --tunnel"
+download the expo app on phone and scan the qr code from camera
+http://127.0.0.1:8000 original server
 
-> Should I commit the ".expo" folder?
+config the fast api server for hack davis uvicorn main:app --reload
 
-No, you should not share the ".expo" folder. It does not contain any information that is relevant for other developers working on the project, it is specific to your machine.
+sudo npm install -g expo-cli uvicorn main:app --host 0.0.0.0 --port 8000 --reload uvicorn main:app --host 10.0.2.2 --port 8000 --reload uvicorn main:app --host 173.23.29.40 --port 3000 --reload uvicorn main:app --host 0.0.0.0 --port 3000 --reload
 
-Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
+uvicorn main:app --host 127.0.0.1 --reload
+
+HOW TO SET THE SERVER UP
+
+Put this on the computer side cd to lifeofkaiapp and then cd to server and run this command "uvicorn main:app --host 0.0.0.0 --port 3000 --reload" http://http://0.0.0.0:3000/
+
+run this on the physical phone and also all the files have this as the ip config http://172.20.10.3:3000
